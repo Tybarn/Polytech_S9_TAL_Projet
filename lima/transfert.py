@@ -26,7 +26,7 @@ for line in file_in.readlines():
 	if(len(words)==0):
 		continue
 	print(words)
-	for i in range(0,len(words) -2):
+	for i in range(0,len(words) -1):
 		file_out.write(words[i]+" ")
 	if(words[-1]=="SCONJ"):
 		words[-1]="CC"

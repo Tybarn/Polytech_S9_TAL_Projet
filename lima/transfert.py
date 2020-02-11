@@ -36,7 +36,7 @@ for line in file_in.readlines():
 		words[-1]=":"
 	elif (words[-1]=="AUX"):
 		words[-1]="MD"
-	elif (words[-1]=="PROP"):
+	elif (words[-1]=="PROPN"):
 		words[-1]="NNP"
 	
 	file_out.write("_"+ref_tag[limited_tag.index(words[-1])]+"\n")

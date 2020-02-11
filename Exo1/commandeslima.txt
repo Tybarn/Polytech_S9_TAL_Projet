@@ -1,0 +1,1 @@
+analyzeText -l eng -p main pos_test.txt > pos_test.txt.pos.lima

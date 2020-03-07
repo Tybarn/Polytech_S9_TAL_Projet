@@ -14,7 +14,8 @@ cd stanford/stanford-postagger-2018-10-16/
 ./stanford-postagger.sh models/english-left3words-distsim.tagger ../../data/Exo1/pos_test.txt > ../../data/Exo1/pos_test.txt.pos.stanford
 echo "pos_test.txt.pos.stanford : Done"
 cd ..
-python python/formatage_stanford.py ../data/Exo1/pos_test.txt.pos.stanford ../data/Exo1/POSTags_PTB_Universal_Linux.txt
+python python/format_postags_stanford.py ../data/Exo1/pos_test.txt.pos.stanford ../data/Exo1/POSTags_PTB_Universal_Linux.txt
 echo "pos_test.txt.pos.stanford.univ : Done"
+# evaluate stanford
 python python/evaluate.py ../data/Exo1/pos_test.txt.pos.stanford.univ ../data/Exo1/pos_reference.txt.univ
 echo "stanford evaluate : Done"

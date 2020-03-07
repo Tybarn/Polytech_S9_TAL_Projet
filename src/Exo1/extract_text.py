@@ -1,4 +1,5 @@
 import sys
+import re
 
 # Check arguments
 if len(sys.argv) != 3:
@@ -17,7 +18,7 @@ for line in inFile:
         splitLine = line.split('\t')
         word = splitLine[0]
         # Add it to sentence variable
-        sentence += ' ' + word
+        sentence += word + ' '
     else:
         outFile.write(sentence)
         sentence = ''
@@ -28,5 +29,3 @@ if sentence != '':
 # Close opened files
 inFile.close()
 outFile.close()
-
-print("extract_text.py : Done")

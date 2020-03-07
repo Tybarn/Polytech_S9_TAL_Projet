@@ -33,15 +33,14 @@ for line in file_in.readlines():
 	if(len(words)==0):
 		file_out.write("\n")
 		continue
-	print(words)
-
 	# Write convert line in output file
 	for i in range(0,len(words)-1):
-		file_out.write(words[i]+" ")
-	file_out.write(new_tag[origin_tag.index(words[-1])]+"\n")
+		if i == len(words)-2 :
+			file_out.write(words[i])
+		else:
+			file_out.write(words[i] + " ")
+	file_out.write("\t" + new_tag[origin_tag.index(words[-1])] + "\n")
 
 # Close files
 file_in.close()
 file_out.close()
-
-print("change_POS.py : Done")

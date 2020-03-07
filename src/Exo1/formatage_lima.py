@@ -18,7 +18,6 @@ for line in file_in.readlines():
 	if(len(words)==0):
 		continue
 	if('#' not in words[0]): #si la ligne ne commence pas par un chiffre alors on l'ignore
-		print(line)
 		file_out.write(words[2]+"\t"+words[3]+"\n")
 
 # Close files

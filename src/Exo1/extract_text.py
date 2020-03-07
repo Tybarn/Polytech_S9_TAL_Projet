@@ -6,7 +6,7 @@ if len(sys.argv) != 3:
 
 # Open input file and create output file
 inFile = open(sys.argv[1], 'r')
-outFile = open(sys.argv[2], 'a+')
+outFile = open(sys.argv[2], 'w')
 
 # Get sentence and build text
 word = ''
@@ -28,3 +28,5 @@ if sentence != '':
 # Close opened files
 inFile.close()
 outFile.close()
+
+print("extract_text.py : Done")

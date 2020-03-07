@@ -1,3 +1,4 @@
+###### Exo 1 : Question 2 #####
 import sys
 import re
 
@@ -20,10 +21,10 @@ for line in inFile:
         # Add it to sentence variable
         sentence += word + ' '
     else:
-        outFile.write(sentence)
+        outFile.write(sentence + "\n")
         sentence = ''
 if sentence != '':
-    outFile.write(sentence)
+    outFile.write(sentence + "\n")
     sentence = ''
 
 # Close opened files

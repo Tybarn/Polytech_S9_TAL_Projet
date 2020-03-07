@@ -4,7 +4,7 @@ import sys
 
 # Check input arguments
 if len(sys.argv) != 2:
-    raise ValueError("Invalid Arguments : Command line should be 'python formulate_lima.py <input file>")
+    raise ValueError("Invalid Arguments : Command line should be 'python formatage_lima.py <input file>")
 
 # Open input and output files
 outputName = sys.argv[1] + ".univ"

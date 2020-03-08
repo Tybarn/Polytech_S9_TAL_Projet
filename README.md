@@ -4,7 +4,7 @@ Projet réalisé dans le cadre du cours de TAL en ET5 Info au sein de Polytech P
 
 Groupe : Théo LEGRAS, Alexis PROUST et Jordane MINET
 
-Le but principal de ce projet est d'installer et évaluer sur leurs performances, points forts et faiblesses, différentes plateformes open source d'analyse linguistique.
+Le but principal de ce projet est d'installer et évaluer sur leurs performances, points forts et faiblesses, différentes plateformes open source d'analyse linguistique.<br/>
 Vous pourrez ici étudier 3 plateformes : Stanford Core NLP, CEA List LIMA et NLTK.
 Le projet se structure autour de 2 exercices :
 	- Exo 1 : Evaluation de l'analyse morpho-syntaxique

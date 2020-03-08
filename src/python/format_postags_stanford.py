@@ -32,6 +32,7 @@ for line in file_in:
     for elmt in elmts:
         words = elmt.split('_')
         file_out.write(words[0] + "\t" + new_tag[origin_tag.index(words[1])] + "\n")
+    file_out.write("\n")
 
 # Close files
 file_in.close()

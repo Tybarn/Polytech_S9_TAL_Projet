@@ -10,22 +10,17 @@ if len(sys.argv) != 3:
 inFile = open(sys.argv[1], 'r')
 outFile = open(sys.argv[2], 'w')
 
-# Get sentence and build text
-word = ''
-sentence = ''
+# Extract text from ref
 for line in inFile:
-    if line != '\n':
-        # find first column
-        splitLine = line.split('\t')
-        word = splitLine[0]
-        # Add it to sentence variable
-        sentence += word + ' '
+    if len(line.strip()) == 0:
+        outFile.write('\n')
     else:
-        outFile.write(sentence + "\n")
-        sentence = ''
-if sentence != '':
-    outFile.write(sentence + "\n")
-    sentence = ''
+        words = line.split()
+        for i in range(0, len(words)-1):
+            if i == len(words)-2:
+                outFile.write(words[i] + "\n")
+            else:
+                outFile.write(words[i] + ' ')
 
 # Close opened files
 inFile.close()

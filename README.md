@@ -44,8 +44,8 @@ Pour lancer l'exercice 2, exécuter le script exo2.sh : ```./exo2.sh``` depuis l
 
 ## Credits
 
-Théo LEGRAS
-Alexis PROUST
+Théo LEGRAS<br/>
+Alexis PROUST<br/>
 Jordane MINET
 
 ## Sources

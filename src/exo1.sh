@@ -1,11 +1,7 @@
 #!/bin/bash
 
 echo " --------------------- EXO 1 ---------------------"
-# change lima to univ
-python python/change_POSTags.py ../data/Exo1/pos_reference.txt.lima ../data/Exo1/pos_reference.txt.lima.tmp ../data/Exo1/POSTags_LIMA_PTB_Linux.txt
-python python/change_POSTags.py ../data/Exo1/pos_reference.txt.lima.tmp ../data/Exo1/pos_reference.txt.univ ../data/Exo1/POSTags_PTB_Universal_Linux.txt
-rm ../data/Exo1/pos_reference.txt.lima.tmp
-echo "Lima -> Univ : Done"
+
 # extract text from univ
 python python/extract_text.py ../data/Exo1/pos_reference.txt.univ ../data/Exo1/pos_test.txt
 echo "Extract text from Univ : Done"
@@ -24,13 +20,16 @@ cd ../data/Exo1/
 analyzeText -l eng -p main pos_test.txt > pos_test.txt.pos.tmp
 python ../../src/python/formatage_lima.py pos_test.txt.pos.tmp
 rm pos_test.txt.pos.tmp
+echo "pos_test.txt.pos.lima : Done"
 cd ../../src
 python python/change_POSTags.py ../data/Exo1/pos_test.txt.pos.lima ../data/Exo1/pos_test.txt.pos.lima.tmp ../data/Exo1/POSTags_LIMA_PTB_Linux.txt
 python python/change_POSTags.py ../data/Exo1/pos_test.txt.pos.lima.tmp ../data/Exo1/pos_test.txt.pos.lima.univ ../data/Exo1/POSTags_PTB_Universal_Linux.txt
 rm ../data/Exo1/pos_test.txt.pos.lima.tmp
+python python/normalisationLima.py ../data/Exo1/pos_test.txt.pos.lima.univ
+echo "Lima -> Univ : Done"
 # evaluate
 echo "##################### EVALUATE #####################"
 echo "STANFORD :"
 python python/evaluate.py ../data/Exo1/pos_test.txt.pos.stanford.univ ../data/Exo1/pos_reference.txt.univ
 echo "LIMA :"
-python python/evaluate.py ../data/Exo1/pos_test.txt.pos.lima.univ ../data/Exo1/pos_reference.txt.univ
+python python/evaluate.py ../data/Exo1/pos_test.txt.pos.lima.univ.test ../data/Exo1/pos_reference.txt.univ

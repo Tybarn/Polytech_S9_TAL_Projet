@@ -19,6 +19,7 @@ analyzeText -l eng -p main ne_test.txt > ne_test.txt.ne.lima.tmp
 python ../../src/python/formatage_lima_connlu.py ne_test.txt.ne.lima.tmp
 rm ne_test.txt.ne.lima.tmp
 echo "NER Lima : Done"
+cd ../../src/
 python python/format_ner_lima.py ../data/Exo2/ne_test.txt.ne.lima ../data/Exo2/NER_LIMA_CONLL.txt
 echo "NER Lima -> CoNLL : Done"
 # evaluate Lima

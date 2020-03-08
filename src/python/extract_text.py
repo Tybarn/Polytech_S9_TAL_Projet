@@ -12,15 +12,12 @@ outFile = open(sys.argv[2], 'w')
 
 # Extract text from ref
 for line in inFile:
-    if len(line.strip()) == 0:
+    words = line.split()
+    if len(words) == 0:
         outFile.write('\n')
-    else:
-        words = line.split()
+    else :
         for i in range(0, len(words)-1):
-            if i == len(words)-2:
-                outFile.write(words[i] + "\n")
-            else:
-                outFile.write(words[i] + ' ')
+            outFile.write(words[i] + " ")
 
 # Close opened files
 inFile.close()

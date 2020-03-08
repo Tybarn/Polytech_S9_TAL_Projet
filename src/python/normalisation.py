@@ -20,7 +20,7 @@ for line in lines:
 		continue
 	print(line)
 	print(words[:-1])
-	for word in words[:-1]: #si la ligne ne commence pas par un chiffre alors on l'ignore
+	for word in words[:-1]: 
 		file_out.write(word+"\t"+words[-1]+"\n")
 
 file_out.close()

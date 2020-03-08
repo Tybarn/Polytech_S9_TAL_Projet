@@ -33,7 +33,6 @@ for line in file_in.readlines():
 	elmts = line.split()
 	if(len(elmts) <= 1):
 		continue
-	print(elmts)
 	tag = new_tag[origin_tag.index(elmts[-1])]
 	for word in elmts[:-2]:
 		file_out.write(word + " ")

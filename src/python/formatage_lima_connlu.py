@@ -18,7 +18,7 @@ for line in file_in.readlines():
 	if(len(words)<4):
 		continue
 	if('#' not in words[0]):
-		if("NE=" in words[9]): #si la ligne ne commence pas par un chiffre alors on l'ignore
+		if("NE=" in words[9]):
 			file_out.write(words[1]+"\t"+re.findall(r"[\w']+",words[9])[2]+"\n")
 		else:
 			file_out.write(words[1]+"\tO\n")

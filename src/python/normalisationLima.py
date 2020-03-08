@@ -28,12 +28,10 @@ i = 1
 construction = getWords(lines[0])
 for line in linesRef:
 	actualLine = getWords(line)
-	print(actualLine)
 	words = line.split()
 	if(len(words)<=1):
 		continue
 	while(i < len(lines)-1):
-		print("construction "+construction)
 		if((construction+getWords(lines[i])).lower()in actualLine.lower()):
 			construction+=getWords(lines[i])
 			i+=1
